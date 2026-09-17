@@ -1,0 +1,46 @@
+databases:
+  - name: twitter-clone-db
+    plan: free
+
+services:
+  - type: web
+    name: twitter-clone
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    autoDeploy: false
+    preDeployCommand: python manage.py migrate
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com localhost 127.0.0.1"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SQL_ENGINE
+        value: django.db.backends.postgresql
+      - key: SQL_DATABASE
+        fromDatabase:
+          name: twitter-clone-db
+          property: database
+      - key: SQL_USER
+        fromDatabase:
+          name: twitter-clone-db
+          property: user
+      - key: SQL_PASSWORD
+        fromDatabase:
+          name: twitter-clone-db
+          property: password
+      - key: SQL_HOST
+        fromDatabase:
+          name: twitter-clone-db
+          property: host
+      - key: SQL_PORT
+        fromDatabase:
+          name: twitter-clone-db
+          property: port
+      - key: CLOUDINARY_URL
+        sync: false
