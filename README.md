@@ -55,7 +55,7 @@ Por padrão o projeto roda com SQLite sem configuração nenhuma. Para usar Post
 |---|---|---|
 | `SECRET_KEY` | Chave secreta do Django | (valor de desenvolvimento embutido) |
 | `DEBUG` | `"True"` ou `"False"` | `True` |
-| `DJANGO_ALLOWED_HOSTS` | Hosts permitidos, separados por espaço | `127.0.0.1 localhost cedric.pythonanywhere.com` |
+| `DJANGO_ALLOWED_HOSTS` | Hosts permitidos, separados por espaço | `127.0.0.1 localhost .onrender.com` |
 | `SQL_ENGINE` | `django.db.backends.postgresql` para Postgres | `django.db.backends.sqlite3` |
 | `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`, `SQL_HOST`, `SQL_PORT` | Credenciais do banco Postgres | — |
 
