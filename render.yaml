@@ -10,7 +10,6 @@ services:
     plan: free
     healthCheckPath: /
     autoDeploy: false
-    preDeployCommand: python manage.py migrate
     envVars:
       - key: PORT
         value: "8000"
