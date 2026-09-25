@@ -80,4 +80,4 @@ Autenticação via token: envie o header `Authorization: Token <seu-token>` obti
 
 ## Deploy
 
-Aplicação disponível em: **_(adicionar link do deploy aqui depois de publicar no Render)_**
+Aplicação disponível em: **https://twitter-clone-tqoh.onrender.com/**
